@@ -4,7 +4,6 @@
   color: rgb(100, 100, 100);
 }
 .transcribe-content {
-    background: #aecafc19;
     min-height: calc(100vh - 137px);
     overflow-y: scroll;
     &--container {
@@ -14,11 +13,19 @@
     span {
         font-size: 18px;
         line-height: 1.6;
+        
+    }
+    span.active {
+      color: $color-primary;
+      ~ span {
+        color: $color-gray;
+      }
     }
     
 }
 .transcribe-player {
   position: fixed;
+  background-color: #f1f3f4;
   bottom: 0;
   left: 0;
   right: 0;
@@ -35,10 +42,18 @@
     .player-items {
       display: flex;
       align-items: center;
+      width: 100%;
+      audio {
+        width: 100%;
+        outline: none;
+      }
     }
-    .player-time {
+    .player-times {
+      display: flex;
+      align-items: center;
+
       &--text {
-        font-size: 18px;
+        font-size: 15px;
         color: #898989;
       }
     }
@@ -53,22 +68,17 @@
       height: 6pt !important;
       cursor: pointer !important;
       -webkit-appearance: none !important;
-      margin: 10pt 2pt !important;
-      outline: none !important;
       border-radius: 4px !important;
-      background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(0.5, rgb(132, 174, 244)), color-stop(0.5, rgb(242, 242, 242)));
-      color: rgb(196, 196, 196);
+      outline: none;
       cursor: default;
       padding: initial;
       border: initial;
-      margin: 2px;
-      min-width: 500px;
-      width: 65vw;
+      width: 70vw;
       &::-webkit-slider-thumb {
           -webkit-appearance: none;
           border-radius: 50%;
-          width: 14px;
-          height: 14px;
+          width: 12px;
+          height: 12px;
           background-color: $color-primary
       }
     }

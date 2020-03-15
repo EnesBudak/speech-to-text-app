@@ -1,44 +1,66 @@
 <template>
-    <div class="transcribe-player">
-        <div class="transcribe-player--container">
-            <div class="player-items">
-                <div class="player-item">
-                    <div class="icon icon-playback">
-                        <svg fill="#84AEF4" width="26px" height="26px" viewBox="0 0 25 25" class=""><g id="Group-3" transform="translate(1.000000, 0.000000)"><path d="M11.4855582,0.628325409 C11.4855474,0.405939565 11.3614305,0.202626774 11.1649094,0.10307833 C10.9683882,0.00352988587 10.7331613,0.0248159005 10.557214,0.158069543 L5.91433227,3.68168515 C5.76804852,3.79269829 5.68195604,3.96692763 5.68195604,4.15195569 C5.68195604,4.33698376 5.76804852,4.5112131 5.91433227,4.62222624 L10.557214,8.14584184 C10.7331655,8.27909866 10.968399,8.30038227 11.1649223,8.20082648 C11.3614457,8.1012707 11.4855583,7.89794775 11.4855582,7.67555662 L11.4855582,5.03284491 C16.4536817,5.03284491 20.4811416,9.10825072 20.4811416,14.1355186 C20.4811416,19.1627864 16.4536817,23.2381922 11.4855582,23.2381922 C6.5174347,23.2381922 2.48997484,19.1627864 2.48997484,14.1355186 L2.48997484,13.5482493 C2.48997484,13.0617395 2.10022066,12.6673454 1.61943452,12.6673454 C1.13864837,12.6673454 0.748894191,13.0617395 0.748894191,13.5482493 L0.748894191,14.1355186 C0.748894191,20.135806 5.55586241,25 11.4855582,25 C17.415254,25 22.2222222,20.135806 22.2222222,14.1355186 C22.2222222,8.13523114 17.415254,3.27103711 11.4855582,3.27103711 L11.4855582,0.628325409 Z" id="Shape"></path><text id="5" font-family="ArialMT, Arial" font-size="11" font-weight="600"><tspan x="8" y="19">5</tspan></text></g></svg>
-                    </div>
-                </div>
-                <div class="player-item ml-2">
-                    <div class="icon icon-play">
-                        <svg fill="#FFFFFF" width="26px" height="26px" viewBox="0 0 27 25" class=""><path d="M24.6496596,11.5799226 C25.3409389,12.0883522 25.3459503,12.9089937 24.6496596,13.4211091 L9.25167189,24.7461882 C8.56039259,25.2546178 8,24.9759853 8,24.1178706 L8,0.883161121 C8,0.0277213266 8.55538121,-0.257271849 9.25167189,0.254843573 L24.6496596,11.5799226 Z" id="Triangle"></path></svg>
-                    </div>
-                </div>
-                <div class="player-item ml-2">
-                    <div class="icon icon-play-forward">
-                        <svg fill="#84AEF4" width="26px" height="26px" viewBox="0 0 25 25" class=""><g id="Group-3" transform="translate(1.000000, 0.000000)"><path d="M11.4855582,0.628325409 C11.4855474,0.405939565 11.3614305,0.202626774 11.1649094,0.10307833 C10.9683882,0.00352988587 10.7331613,0.0248159005 10.557214,0.158069543 L5.91433227,3.68168515 C5.76804852,3.79269829 5.68195604,3.96692763 5.68195604,4.15195569 C5.68195604,4.33698376 5.76804852,4.5112131 5.91433227,4.62222624 L10.557214,8.14584184 C10.7331655,8.27909866 10.968399,8.30038227 11.1649223,8.20082648 C11.3614457,8.1012707 11.4855583,7.89794775 11.4855582,7.67555662 L11.4855582,5.03284491 C16.4536817,5.03284491 20.4811416,9.10825072 20.4811416,14.1355186 C20.4811416,19.1627864 16.4536817,23.2381922 11.4855582,23.2381922 C6.5174347,23.2381922 2.48997484,19.1627864 2.48997484,14.1355186 L2.48997484,13.5482493 C2.48997484,13.0617395 2.10022066,12.6673454 1.61943452,12.6673454 C1.13864837,12.6673454 0.748894191,13.0617395 0.748894191,13.5482493 L0.748894191,14.1355186 C0.748894191,20.135806 5.55586241,25 11.4855582,25 C17.415254,25 22.2222222,20.135806 22.2222222,14.1355186 C22.2222222,8.13523114 17.415254,3.27103711 11.4855582,3.27103711 L11.4855582,0.628325409 Z" id="Shape" transform="translate(11.485558, 12.520467) scale(-1, 1) translate(-11.485558, -12.520467) "></path><text id="5" font-family="ArialMT, Arial" font-size="11" font-weight="600"><tspan x="8" y="19">5</tspan></text></g></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="player-items ml-5">
-                <div class="player-item">
-                    <div class="player-time">
-                        <div class="player-time--text">
-                            00:00:13.400
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="player-items ml-5">
-                <div class="player-slider">
-                    <div class="player-slider--times">
-                        <div class="player-slider--times-finish">
-                            00:00:14.952
-                        </div>
-                    </div>
-                    <div class="player-slider--input">
-                        <input type="range" min="0" max="1" step="0.001" value="0.696" style="background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(0.696, rgb(132, 174, 244)), color-stop(0.696, rgb(242, 242, 242)));">
-                    </div>
-                </div>
-            </div>
+  <div class="transcribe-player">
+    <div class="transcribe-player--container">
+      <div class="player-items">
+        <div class="player-item">
+          <div class="icon icon-playback">
+            <img src="/assets/icons/playback.svg" alt="" />
+          </div>
         </div>
+        <div class="player-item ml-2">
+          <div class="icon icon-play">
+            <img src="/assets/icons/play.svg" alt="" />
+          </div>
+        </div>
+        <div class="player-item ml-2">
+          <div class="icon icon-play-forward">
+            <img src="/assets/icons/playforward.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="player-items ml-5">
+        <div class="player-slider player-item">
+          <div class="player-times">
+            <div class="player-times--text">
+              00:13
+            </div>
+            <div class="pl-1 pr-1">/</div>
+            <div class="player-times--text">
+              00:14
+            </div>
+          </div>
+          <div class="player-slider--input">
+            <input
+              type="range"
+              min="0"
+              max="1"
+              v-model="rangeValue"
+              step="0.001"
+              :style="{
+                backgroundImage: ` -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${range}, rgb(132, 174, 244)), color-stop(${range}, rgb(242, 242, 242)))`
+              }"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      rangeValue: 0,
+      videoSecond: 60
+    };
+  },
+  computed: {
+      range(){
+          return this.rangeValue
+      }
+  },
+  mounted(){
+      
+  }
+};
+</script>
