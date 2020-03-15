@@ -1,29 +1,39 @@
 const router = require("express").Router();
-const AWS = require("aws-sdk");
+const {
+  transcribeJob,
+  uploadGoogleStorage
+} = require("../googleServices/fileUploadTranscribe");
+const multer = require("multer");
+const multerStorage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, "./uploads/");
+  },
+  filename: function(req, file, cb) {
+    cb(null, file.fieldname + "-" + Date.now() + file.originalname);
+  }
+});
 
+const fileFilter = (req, file, cb) => {
+  if (file.mimetype === "audio/wave" || file.mimetype === "audio/wave") {
+    return cb(null, true);
+  } else {
+    req.fileValidationError = "Forbidden extension";
+    return cb(null, false, req.fileValidationError);
+  }
+};
+const upload = multer({ storage: multerStorage, fileFilter: fileFilter });
 
-const upload = require("../services/audio-upload");
+router.post("/file", upload.single("audio"), (req, res) => {
+  console.log(req.file);
 
-const singleUpload = upload.single("audio");
-
-
-router.post("/file", (req, res) => {
-  singleUpload(req, res, function(err) {
-    if (err) {
-      return res.status(422).send({
-        errors: [{ title: "Image Upload Error", detail: err.message }]
+  if (!req.fileValidationError) {
+    uploadGoogleStorage(req, res)
+      .catch(console.error)
+      .then(() => {
+        transcribeJob(req, res).catch(console.error);
       });
-    }
-    var transcribeservice = new AWS.TranscribeService();
-
-    transcribeservice.startTranscriptionJob({
-      LanguageCode: "tr-TR",
-      Media: { MediaFileUri: req.file.location },
-      MediaFormat: "mp3",
-      MediaSampleRateHertz: 8000, // normally 8000 if you are using wav file
-      OutputBucketName: "transcription.json"
-    })
-    // return res.json({ imageUrl: req.file.location });
-  });
+  } else {
+    res.json({ status: 401, message: "Hatalı dosya dürü" });
+  }
 });
 module.exports = router;

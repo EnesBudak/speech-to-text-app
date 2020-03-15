@@ -11,7 +11,7 @@ app.use(cors());
 const fileRoute = require("./routes/file");
 const authRoute = require("./routes/auth");
 const dashboardRoute = require("./routes/dashboard");
-
+const transcribesRoute = require("./routes/transcribes");
 dotenv.config();
 
 // connect to DB
@@ -36,6 +36,7 @@ app.use(express.json());
 app.use("/api/user", fileRoute);
 app.use("/api/user", authRoute);
 app.use("/api/dashboard", dashboardRoute);
+app.use("/api/user/", transcribesRoute);
 app.listen(process.env.PORT, () => {
-  console.log(`Server up and running on ${process.env.PORT} port`);
+  console.log("Server up and running");
 });
