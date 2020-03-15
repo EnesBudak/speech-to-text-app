@@ -35,7 +35,7 @@ const state = {
       },
       {
         wordStart:"3.0",
-        wordEnd:"3.1",
+        wordEnd:"5.1",
         word:"Mahallesi"
       }
     ]

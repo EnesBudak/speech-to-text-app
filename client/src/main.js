@@ -1,18 +1,10 @@
 import Vue from "vue";
 import App from "./App.vue";
-import ElementUI from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
-import locale from "element-ui/lib/locale/lang/tr-TR";
-import VueQriously from "vue-qriously";
-import VueQrcodeReader from "vue-qrcode-reader";
 import VueRouter from "vue-router";
 import { routes } from "./routes.js";
 import store from "./store/store";
 import axios from "axios";
 
-Vue.use(VueQriously);
-Vue.use(VueQrcodeReader);
-Vue.use(ElementUI, { locale });
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
