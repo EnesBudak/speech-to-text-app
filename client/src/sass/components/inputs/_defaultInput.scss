@@ -1,0 +1,25 @@
+@import "../../abstracts/variables";
+.input-label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.input-control {
+    margin-bottom: 20px;
+}
+.input-control .input-default {
+    width: 100%;
+}
+.input-default {
+    outline: none;
+    position: relative;
+    border-radius: 4px;
+    background-color: $color-blue-light1;
+    border: 2px solid transparent;
+    padding: 10px 14px;
+    font-size: 17px;
+    &:focus {
+        border-color:$color-blue;
+        border-radius: 4px;
+    }
+}

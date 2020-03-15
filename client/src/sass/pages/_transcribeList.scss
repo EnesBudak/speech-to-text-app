@@ -1,0 +1,26 @@
+table th {
+  font-size: 13px;
+  font-weight: 400;
+  color: #b4b4b4;
+  text-align: start;
+  padding-right: 15px;
+}
+.transcribes-table {
+  width: 90%;
+  margin: 30px auto;
+}
+table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+  color: $color-gray--dark;
+  font-weight: 600;
+  font-size: 16px;
+}
+.transcribe-item {
+  margin-bottom: 10px;
+  cursor: pointer;
+  &--title {
+    max-width: 190px;
+  }
+}

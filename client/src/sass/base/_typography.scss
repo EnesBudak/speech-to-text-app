@@ -1,0 +1,62 @@
+.heading-1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.heading-2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.heading-3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.heading-4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.heading-5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.text-center {
+  text-align: center;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.text-xs {
+  font-size: 12px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.title-md {
+  font-size: 20px;
+  font-weight: 600;
+}
+.text-primary,
+.title-medium {
+  color: $color-dark;
+}
+
+.text-secondary {
+  color: lighten($color-dark, 10%);
+}
+.text-bold {
+  font-weight: bold;
+}
+.f-400 {
+  font-weight: 400;
+}
+.f-500 {
+  font-weight: 500;
+}
+.f-600 {
+  font-weight: 600;
+}
+.f-700 {
+  font-weight: 700;
+}
+.f-800 {
+  font-weight: 800;
+}

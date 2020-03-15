@@ -1,0 +1,9 @@
+.border-bottom {
+    border-bottom: 1px solid $border-color;
+}
+.border {
+    border: 1px solid $border-color ;
+    &.radius {
+        border-radius: $radius;
+    }
+}
